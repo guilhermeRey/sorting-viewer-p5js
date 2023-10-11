@@ -383,10 +383,9 @@ class CodeDebugger {
   }
 
   next() {
-    this.stepper++;
-
-    if (this.stepper >= this.tracer.length) {
-      this.stepper = this.stepper;
+    if (this.stepper + 1 <= this.tracer.length - 1) {
+      this.stepper++;
+      return;
     }
   }
 
